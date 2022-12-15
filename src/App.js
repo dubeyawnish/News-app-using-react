@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export class App extends Component {
   static propTypes = {};
+  apiKey = process.env.REACT_APP_NEWS_API;
   state = {
     progress: 0,
   };
@@ -28,7 +29,11 @@ export class App extends Component {
               exact
               path="/"
               element={
-                <News setProgress={this.setProgress} category="general" />
+                <News
+                  setProgress={this.setProgress}
+                  apiKey={this.apiKey}
+                  category="general"
+                />
               }
             ></Route>
             <Route
@@ -37,6 +42,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="business"
                   category="business"
                 />
@@ -48,6 +54,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="entertainment"
                   category="entertainment"
                 />
@@ -59,6 +66,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="general"
                   category="general"
                 />
@@ -70,6 +78,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="health"
                   category="health"
                 />
@@ -81,6 +90,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="science"
                   category="science"
                 />
@@ -92,6 +102,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="sports"
                   category="sports"
                 />
@@ -103,6 +114,7 @@ export class App extends Component {
               element={
                 <News
                   setProgress={this.setProgress}
+                  apiKey={this.apiKey}
                   key="technology"
                   category="technology"
                 />
