@@ -12,7 +12,7 @@ export class App extends Component {
       <div>
         <Router>
           <Navbar />
-          {/*<News category="sports" />*/}
+
           <Routes>
             <Route exact path="/" element={<News category="general" />}></Route>
             <Route
